@@ -11,7 +11,7 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="max-w-3xl px-6 pb-16 pt-8 text-center sm:px-10 lg:px-12">
+    <footer className="max-w-4xl px-6 pb-12 pt-6 text-center sm:px-10 lg:px-12">
       <ul className="mb-6 flex justify-center gap-6 lg:hidden">
         {links.map(({ href, label, Icon }) => (
           <li key={label}>

@@ -31,7 +31,7 @@ export const education = [
     school: "Columbia University in the City of New York",
     degree: "M.S. in Computer Science",
     period: "Sep 2021 – Dec 2022",
-    logo: "/images/logos/columbia-crown.svg",
+    logo: "/images/logos/columbia-crown.png",
   },
   {
     school: "Wuhan University",
@@ -69,7 +69,7 @@ export const openSource: OpenSourceProject[] = [
   },
   {
     name: "Cilium",
-    subtitle: "datapath & agent bootstrap",
+    subtitle: "datapath",
     meta: "4 patches merged",
     metaUrl:
       "https://github.com/cilium/cilium/pulls?q=is%3Apr+author%3ASm0ckingBird+is%3Aclosed",
@@ -138,7 +138,7 @@ export const experience: ExperienceEntry[] = [
     company: "Columbia University in the City of New York",
     location: "New York, USA",
     period: "Aug 2022 – Dec 2022",
-    logo: "/images/logos/columbia-crown.svg",
+    logo: "/images/logos/columbia-crown.png",
     bullets: [
       {
         text: "Held office hours and graded assignments covering processes, threads, synchronization, virtual memory, and file systems.",

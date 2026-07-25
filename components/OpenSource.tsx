@@ -5,7 +5,7 @@ import { BulletList } from "./BulletList";
 
 export function OpenSource() {
   return (
-    <section id="open-source" className="max-w-3xl px-6 py-16 sm:px-10 lg:px-12">
+    <section id="open-source" className="max-w-4xl px-6 py-10 sm:px-10 lg:px-12">
       <SectionHeading number="02" title="Open Source Contributions" />
 
       <div className="grid gap-5 sm:grid-cols-2">

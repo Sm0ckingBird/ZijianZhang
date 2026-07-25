@@ -101,17 +101,34 @@ function SocialIcons() {
 export function Sidebar() {
   const active = useActiveSection();
   const [open, setOpen] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxOpen(false);
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [lightboxOpen]);
 
   return (
     <>
       {/* Desktop sticky sidebar */}
       <aside className="sticky top-0 hidden h-screen w-[440px] flex-none flex-col justify-between self-start px-14 py-16 lg:flex">
         <div>
-          <img
-            src={withBasePath(profile.photo)}
-            alt={profile.name}
-            className="h-20 w-20 rounded-full border-2 border-teal/40 object-cover"
-          />
+          <button
+            type="button"
+            onClick={() => setLightboxOpen(true)}
+            aria-label={`View full-size photo of ${profile.name}`}
+            className="block rounded-full transition-transform duration-200 hover:scale-105"
+          >
+            <img
+              src={withBasePath(profile.photo)}
+              alt={profile.name}
+              className="h-32 w-32 rounded-full border-2 border-teal/40 object-cover"
+            />
+          </button>
           <h1 className="mt-6 text-3xl font-bold text-lightest-slate">{profile.name}</h1>
           <p className="mt-2 text-lg font-medium text-slate">{profile.role}</p>
           <p className="mt-4 text-sm leading-relaxed text-slate">{profile.tagline}</p>
@@ -171,6 +188,30 @@ export function Sidebar() {
             </a>
             <SocialIcons />
           </div>
+        </div>
+      )}
+
+      {lightboxOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-navy/90 p-6 backdrop-blur-sm"
+          onClick={() => setLightboxOpen(false)}
+        >
+          <button
+            type="button"
+            aria-label="Close"
+            className="absolute right-6 top-6 text-slate transition-colors hover:text-teal"
+            onClick={() => setLightboxOpen(false)}
+          >
+            <CloseIcon className="h-7 w-7" />
+          </button>
+          <img
+            src={withBasePath(profile.photo)}
+            alt={profile.name}
+            className="max-h-[85vh] max-w-[90vw] rounded-lg border-2 border-teal/40 object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
       )}
     </>

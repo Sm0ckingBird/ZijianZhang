@@ -5,7 +5,7 @@ import { BulletList } from "./BulletList";
 
 export function Experience() {
   return (
-    <section id="experience" className="max-w-3xl px-6 py-16 sm:px-10 lg:px-12">
+    <section id="experience" className="max-w-4xl px-6 py-10 sm:px-10 lg:px-12">
       <SectionHeading number="03" title="Work Experience" />
 
       <div className="space-y-4">
