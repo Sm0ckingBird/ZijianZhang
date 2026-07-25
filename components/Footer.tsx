@@ -1,5 +1,6 @@
-import { profile } from "@/lib/data";
+import { analytics, profile } from "@/lib/data";
 import { GithubIcon, LinkedinIcon, MailIcon, GoogleScholarIcon, OrcidIcon } from "./Icons";
+import { ViewCounter } from "./ViewCounter";
 
 const links = [
   { href: profile.github, label: "GitHub", Icon: GithubIcon },
@@ -30,6 +31,17 @@ export function Footer() {
       <p className="font-mono text-xs text-slate-dim">
         Built with Next.js &amp; Tailwind CSS &middot; {profile.name}
       </p>
+      <div className="mt-3 flex flex-col items-center gap-1">
+        <ViewCounter />
+        <a
+          href={`https://${analytics.goatcounterCode}.goatcounter.com/`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-mono text-xs text-slate-dim underline decoration-slate-dim/40 underline-offset-2 hover:text-teal hover:decoration-teal"
+        >
+          site stats
+        </a>
+      </div>
     </footer>
   );
 }

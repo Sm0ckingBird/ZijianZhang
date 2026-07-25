@@ -15,6 +15,13 @@ export const profile = {
   photo: "/images/myself.jpeg",
 };
 
+// GoatCounter site code — https://CODE.goatcounter.com. Requires "Allow adding visitor
+// counts on your website" enabled in GoatCounter site settings for the counter widget,
+// and the dashboard set to public for the stats link to be viewable by visitors.
+export const analytics = {
+  goatcounterCode: "nightwalkzz",
+};
+
 export const skills = [
   "Linux Kernel",
   "eBPF",

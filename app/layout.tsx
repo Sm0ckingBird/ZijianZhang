@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
-import { profile } from "@/lib/data";
+import { analytics, profile } from "@/lib/data";
 import { withBasePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
@@ -19,7 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <Script
+          data-goatcounter={`https://${analytics.goatcounterCode}.goatcounter.com/count`}
+          src="https://gc.zgo.at/count.js"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
