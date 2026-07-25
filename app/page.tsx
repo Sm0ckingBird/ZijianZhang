@@ -10,15 +10,17 @@ export default function Home() {
   return (
     <>
       <Spotlight />
-      <Sidebar />
-      <main id="top" className="pt-16 lg:ml-[380px] lg:pt-0">
-        <About />
-        <OpenSource />
-        <Experience />
-        <PublicationsTalks />
-      </main>
-      <div className="lg:ml-[380px]">
-        <Footer />
+      <div className="mx-auto flex max-w-[1440px] lg:items-start">
+        <Sidebar />
+        <div id="top" className="min-w-0 flex-1 pt-16 lg:pt-0">
+          <main>
+            <About />
+            <OpenSource />
+            <Experience />
+            <PublicationsTalks />
+          </main>
+          <Footer />
+        </div>
       </div>
     </>
   );

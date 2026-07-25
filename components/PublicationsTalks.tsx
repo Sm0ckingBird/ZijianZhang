@@ -4,17 +4,17 @@ import { ExternalLinkIcon } from "./Icons";
 
 export function PublicationsTalks() {
   return (
-    <section id="publications" className="max-w-3xl px-6 py-24 sm:px-16 lg:px-24">
+    <section id="publications" className="max-w-3xl px-6 py-16 sm:px-10 lg:px-12">
       <SectionHeading number="04" title="Publications & Talks" />
 
-      <ul className="space-y-4">
+      <ul className="space-y-3">
         {publicationsAndTalks.map((item) => (
           <li key={item.title}>
             <a
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between gap-4 rounded-lg border border-navy-lighter bg-navy-light px-6 py-4 transition-all duration-300 hover:-translate-y-1 hover:border-teal"
+              className="group flex items-center justify-between gap-4 rounded-lg border border-navy-lighter bg-navy-light px-5 py-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-teal"
             >
               <div>
                 <span className="mb-1 inline-block rounded border border-teal/40 px-2 py-0.5 font-mono text-[11px] text-teal">

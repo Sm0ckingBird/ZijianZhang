@@ -1,15 +1,17 @@
 import { profile } from "@/lib/data";
-import { GithubIcon, LinkedinIcon, MailIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon, MailIcon, GoogleScholarIcon, OrcidIcon } from "./Icons";
 
 const links = [
   { href: profile.github, label: "GitHub", Icon: GithubIcon },
   { href: profile.linkedin, label: "LinkedIn", Icon: LinkedinIcon },
+  { href: profile.googleScholar, label: "Google Scholar", Icon: GoogleScholarIcon },
+  { href: profile.orcid, label: "ORCID", Icon: OrcidIcon },
   { href: `mailto:${profile.email}`, label: "Email", Icon: MailIcon },
 ];
 
 export function Footer() {
   return (
-    <footer className="max-w-3xl px-6 pb-16 pt-8 text-center sm:px-16 lg:px-24">
+    <footer className="max-w-3xl px-6 pb-16 pt-8 text-center sm:px-10 lg:px-12">
       <ul className="mb-6 flex justify-center gap-6 lg:hidden">
         {links.map(({ href, label, Icon }) => (
           <li key={label}>
@@ -26,20 +28,6 @@ export function Footer() {
         ))}
       </ul>
       <p className="font-mono text-xs text-slate-dim">
-        <a
-          href={profile.googleScholar}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-teal"
-        >
-          Google Scholar
-        </a>{" "}
-        &middot;{" "}
-        <a href={profile.orcid} target="_blank" rel="noopener noreferrer" className="hover:text-teal">
-          ORCID
-        </a>
-      </p>
-      <p className="mt-4 font-mono text-xs text-slate-dim">
         Built with Next.js &amp; Tailwind CSS &middot; {profile.name}
       </p>
     </footer>

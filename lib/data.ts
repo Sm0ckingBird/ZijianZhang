@@ -31,7 +31,7 @@ export const education = [
     school: "Columbia University in the City of New York",
     degree: "M.S. in Computer Science",
     period: "Sep 2021 – Dec 2022",
-    logo: "/images/logos/columbia.svg",
+    logo: "/images/logos/columbia-crown.svg",
   },
   {
     school: "Wuhan University",
@@ -46,8 +46,7 @@ export type OpenSourceProject = {
   subtitle: string;
   meta: string;
   metaUrl: string;
-  logo?: string;
-  icon?: "linux";
+  logo: string;
   bullets: { text: string; linkText?: string; linkUrl?: string }[];
 };
 
@@ -58,7 +57,7 @@ export const openSource: OpenSourceProject[] = [
     meta: "16 patches merged",
     metaUrl:
       "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Zijian+Zhang",
-    icon: "linux",
+    logo: "/images/logos/tux.svg",
     bullets: [
       {
         text: "Fixed memory leak, charging bugs, and race conditions in eBPF skmsg helper functions.",
@@ -139,7 +138,7 @@ export const experience: ExperienceEntry[] = [
     company: "Columbia University in the City of New York",
     location: "New York, USA",
     period: "Aug 2022 – Dec 2022",
-    logo: "/images/logos/columbia.svg",
+    logo: "/images/logos/columbia-crown.svg",
     bullets: [
       {
         text: "Held office hours and graded assignments covering processes, threads, synchronization, virtual memory, and file systems.",

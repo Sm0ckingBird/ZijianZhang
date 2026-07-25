@@ -4,7 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export function About() {
   return (
-    <section id="about" className="max-w-2xl px-6 py-24 sm:px-16 lg:px-24">
+    <section id="about" className="max-w-2xl px-6 py-16 sm:px-10 lg:px-12">
       <SectionHeading number="01" title="About Me" />
 
       <p>

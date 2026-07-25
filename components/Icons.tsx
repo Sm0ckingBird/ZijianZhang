@@ -101,7 +101,7 @@ export function CloseIcon({ className }: IconProps) {
   );
 }
 
-export function LinuxIcon({ className }: IconProps) {
+export function GoogleScholarIcon({ className }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -113,10 +113,22 @@ export function LinuxIcon({ className }: IconProps) {
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      <circle cx="12" cy="9" r="5" />
-      <path d="M8 13.5 6 20c-.3 1 .5 2 1.5 1.5L12 19l4.5 2.5c1 .5 1.8-.5 1.5-1.5l-2-6.5" />
-      <circle cx="9.5" cy="8" r="0.8" fill="currentColor" stroke="none" />
-      <circle cx="14.5" cy="8" r="0.8" fill="currentColor" stroke="none" />
+      <path d="M12 4 2 9l10 5 8-4.36V16" />
+      <path d="M6 11.5V16c0 1.5 2.7 3.5 6 3.5s6-2 6-3.5v-4.5" />
+    </svg>
+  );
+}
+
+export function OrcidIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="10.5" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="8.3" cy="8.2" r="1.1" fill="currentColor" />
+      <rect x="7.4" y="10.8" width="1.8" height="7" fill="currentColor" />
+      <path
+        d="M11.8 10.8h3.3c2.2 0 3.6 1.5 3.6 3.5s-1.4 3.5-3.6 3.5h-3.3v-7Zm1.8 1.6v3.8h1.4c1.3 0 2-.8 2-1.9s-.7-1.9-2-1.9h-1.4Z"
+        fill="currentColor"
+      />
     </svg>
   );
 }

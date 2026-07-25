@@ -3,7 +3,15 @@
 import { useEffect, useState } from "react";
 import { navLinks, profile } from "@/lib/data";
 import { withBasePath } from "@/lib/basePath";
-import { GithubIcon, LinkedinIcon, MailIcon, CloseIcon, MenuIcon } from "./Icons";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  MailIcon,
+  GoogleScholarIcon,
+  OrcidIcon,
+  CloseIcon,
+  MenuIcon,
+} from "./Icons";
 
 const sectionLinks = navLinks.filter((link) => !link.external);
 const sectionIds = sectionLinks.map((link) => link.href.replace("#", ""));
@@ -11,6 +19,8 @@ const sectionIds = sectionLinks.map((link) => link.href.replace("#", ""));
 const socialLinks = [
   { href: profile.github, label: "GitHub", Icon: GithubIcon },
   { href: profile.linkedin, label: "LinkedIn", Icon: LinkedinIcon },
+  { href: profile.googleScholar, label: "Google Scholar", Icon: GoogleScholarIcon },
+  { href: profile.orcid, label: "ORCID", Icon: OrcidIcon },
   { href: `mailto:${profile.email}`, label: "Email", Icon: MailIcon },
 ];
 
@@ -70,7 +80,7 @@ function Nav({ active, onNavigate }: { active: string; onNavigate?: () => void }
 
 function SocialIcons() {
   return (
-    <ul className="flex items-center gap-5">
+    <ul className="flex items-center gap-4">
       {socialLinks.map(({ href, label, Icon }) => (
         <li key={label}>
           <a
@@ -94,8 +104,8 @@ export function Sidebar() {
 
   return (
     <>
-      {/* Desktop fixed sidebar */}
-      <aside className="fixed inset-y-0 left-0 z-20 hidden w-[380px] flex-col justify-between px-12 py-16 lg:flex">
+      {/* Desktop sticky sidebar */}
+      <aside className="sticky top-0 hidden h-screen w-[440px] flex-none flex-col justify-between self-start px-14 py-16 lg:flex">
         <div>
           <img
             src={withBasePath(profile.photo)}
