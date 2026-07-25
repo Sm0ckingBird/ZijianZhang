@@ -1,6 +1,5 @@
-import { Header } from "@/components/Header";
-import { LeftRail, RightRail } from "@/components/SocialRail";
-import { Hero } from "@/components/Hero";
+import { Sidebar } from "@/components/Sidebar";
+import { Spotlight } from "@/components/Spotlight";
 import { About } from "@/components/About";
 import { OpenSource } from "@/components/OpenSource";
 import { Experience } from "@/components/Experience";
@@ -10,17 +9,17 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Header />
-      <LeftRail />
-      <RightRail />
-      <main>
-        <Hero />
+      <Spotlight />
+      <Sidebar />
+      <main id="top" className="pt-16 lg:ml-[380px] lg:pt-0">
         <About />
         <OpenSource />
         <Experience />
         <PublicationsTalks />
       </main>
-      <Footer />
+      <div className="lg:ml-[380px]">
+        <Footer />
+      </div>
     </>
   );
 }

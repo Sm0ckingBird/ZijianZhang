@@ -9,7 +9,7 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="mx-auto max-w-4xl px-6 pb-16 pt-8 text-center sm:px-10">
+    <footer className="max-w-3xl px-6 pb-16 pt-8 text-center sm:px-16 lg:px-24">
       <ul className="mb-6 flex justify-center gap-6 lg:hidden">
         {links.map(({ href, label, Icon }) => (
           <li key={label}>

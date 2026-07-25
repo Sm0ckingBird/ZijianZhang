@@ -6,7 +6,7 @@ import { LinuxIcon } from "./Icons";
 
 export function OpenSource() {
   return (
-    <section id="open-source" className="mx-auto max-w-4xl px-6 py-24 sm:px-10">
+    <section id="open-source" className="max-w-3xl px-6 py-24 sm:px-16 lg:px-24">
       <SectionHeading number="02" title="Open Source Contributions" />
 
       <div className="grid gap-6 sm:grid-cols-2">

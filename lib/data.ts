@@ -28,10 +28,10 @@ export const skills = [
 
 export const education = [
   {
-    school: "Columbia University",
+    school: "Columbia University in the City of New York",
     degree: "M.S. in Computer Science",
     period: "Sep 2021 – Dec 2022",
-    logo: "/images/logos/columbia.png",
+    logo: "/images/logos/columbia.svg",
   },
   {
     school: "Wuhan University",
@@ -136,10 +136,10 @@ export const experience: ExperienceEntry[] = [
   },
   {
     role: "Teaching Assistant, Operating Systems",
-    company: "Columbia University",
+    company: "Columbia University in the City of New York",
     location: "New York, USA",
     period: "Aug 2022 – Dec 2022",
-    logo: "/images/logos/columbia.png",
+    logo: "/images/logos/columbia.svg",
     bullets: [
       {
         text: "Held office hours and graded assignments covering processes, threads, synchronization, virtual memory, and file systems.",
@@ -151,6 +151,7 @@ export const experience: ExperienceEntry[] = [
     company: "Terapines",
     location: "Wuhan, China",
     period: "Aug 2020 – May 2021",
+    logo: "/images/logos/terapines.svg",
     bullets: [
       {
         text: "Implemented instruction codegen for 50+ proprietary",

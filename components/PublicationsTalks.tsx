@@ -4,7 +4,7 @@ import { ExternalLinkIcon } from "./Icons";
 
 export function PublicationsTalks() {
   return (
-    <section id="publications" className="mx-auto max-w-4xl px-6 py-24 sm:px-10">
+    <section id="publications" className="max-w-3xl px-6 py-24 sm:px-16 lg:px-24">
       <SectionHeading number="04" title="Publications & Talks" />
 
       <ul className="space-y-4">

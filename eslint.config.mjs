@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Static export committed for GitHub Pages (not source):
+    "docs/**",
   ]),
 ]);
 
