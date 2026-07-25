@@ -22,14 +22,15 @@ repository               : "Sm0ckingBird/ZijianZhang"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "myself.png"
+  avatar           : "myself.jpeg"
   name             : "Zijian Zhang"
-  pronouns         : "he/his"  
-  bio              : "Linux Network Engineer@ByteDnace"
+  pronouns         : "he/his"
+  bio              : "Cloud Network Engineer @ ByteDance"
   location         : "Santa Clara, CA"
-  employer         : "Columbia University"
+  employer         : "ByteDance Inc."
   uri              : # URL
-  email            : "zijianzhang@bytedance.com" 
+  email            : "zijianzhang0226@gmail.com"
+  resume           : "https://docs.google.com/document/d/1CQRTQiuIbVqY-QSShJz1IOvknmkrXZN0DC8GMK4ABuM/edit?usp=sharing"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile

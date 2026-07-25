@@ -6,6 +6,7 @@
   position: fixed;
   background: var(--global-bg-color);
   border-bottom: 1px solid var(--global-border-color);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
   height: $masthead-height;
   top: 0;
   width: 100%;

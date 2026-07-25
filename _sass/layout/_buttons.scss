@@ -21,9 +21,13 @@
   border: 0 !important;
   border-radius: $border-radius;
   cursor: pointer;
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
 
   &:hover {
     background-color: mix(white, #000, 20%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   }
 
   .icon {
