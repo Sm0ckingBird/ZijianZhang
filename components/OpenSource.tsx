@@ -18,7 +18,7 @@ export function OpenSource() {
               <img
                 src={withBasePath(project.logo)}
                 alt={project.name}
-                className="h-7 w-7 flex-none object-contain"
+                className="h-9 w-auto max-w-[130px] flex-none object-contain"
               />
               <div>
                 <h3 className="font-semibold text-lightest-slate">

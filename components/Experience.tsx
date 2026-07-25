@@ -19,7 +19,7 @@ export function Experience() {
                 <img
                   src={withBasePath(job.logo)}
                   alt={job.company}
-                  className="h-8 max-w-[110px] flex-none object-contain"
+                  className="h-9 w-auto max-w-[130px] flex-none object-contain"
                 />
               )}
               <div>

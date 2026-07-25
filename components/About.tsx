@@ -31,7 +31,7 @@ export function About() {
             <img
               src={withBasePath(item.logo)}
               alt={item.school}
-              className="h-8 max-w-[110px] flex-none object-contain object-left"
+              className="h-9 w-auto max-w-[130px] flex-none object-contain object-left"
             />
             <span className="text-sm">
               <span className="text-lightest-slate">{item.degree}</span>, {item.school}{" "}
