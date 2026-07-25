@@ -8,10 +8,10 @@ export function About() {
       <SectionHeading number="01" title="About Me" />
 
       <p>
-        I&apos;m a <span className="text-teal">Linux kernel</span> and cloud-networking
-        engineer based in {profile.location}. I spend most of my time inside the Linux
-        networking stack and <span className="text-teal">Cilium</span>&apos;s dataplane, and
-        I&apos;m an upstream contributor to the kernel&apos;s sockmap/tcp_bpf subsystem.
+        I&apos;m a Linux kernel and cloud-networking engineer based in {profile.location}.
+        I spend most of my time inside the <span className="text-teal">Linux</span> networking
+        stack and <span className="text-teal">Cilium</span>&apos;s dataplane, and I&apos;m an
+        upstream contributor to the kernel&apos;s sockmap/tcp_bpf subsystem.
       </p>
       <p className="mt-4">Here are a few technologies I work with day to day:</p>
 

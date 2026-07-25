@@ -14,30 +14,25 @@ export function Experience() {
             key={`${job.company}-${job.role}`}
             className="rounded-lg border border-navy-lighter bg-navy-light p-5 shadow-[0_10px_30px_-15px_rgba(2,12,27,0.7)] transition-all duration-300 hover:-translate-y-1 hover:border-teal"
           >
-            <div className="grid gap-x-6 gap-y-3 sm:grid-cols-[130px_1fr]">
-              <div className="text-xs font-semibold uppercase tracking-wider text-teal sm:pt-1">
-                {job.period}
-              </div>
-
+            <div className="flex flex-wrap items-center gap-3">
+              {job.logo && (
+                <img
+                  src={withBasePath(job.logo)}
+                  alt={job.company}
+                  className="h-9 w-auto max-w-[130px] flex-none object-contain"
+                />
+              )}
               <div>
-                <div className="flex flex-wrap items-center gap-3">
-                  {job.logo && (
-                    <img
-                      src={withBasePath(job.logo)}
-                      alt={job.company}
-                      className="h-9 w-auto max-w-[130px] flex-none object-contain"
-                    />
-                  )}
-                  <div>
-                    <h3 className="font-semibold text-lightest-slate">
-                      {job.role} <span className="font-normal text-teal">@ {job.company}</span>
-                    </h3>
-                    <p className="font-mono text-xs text-slate-dim">{job.location}</p>
-                  </div>
-                </div>
-                {job.bullets.length > 0 && <BulletList bullets={job.bullets} />}
+                <h3 className="font-semibold text-lightest-slate">
+                  {job.role} <span className="font-normal text-teal">@ {job.company}</span>
+                </h3>
+                <p className="font-mono text-xs text-slate-dim">
+                  {job.location} &middot;{" "}
+                  <span className="font-semibold text-teal">{job.period}</span>
+                </p>
               </div>
             </div>
+            {job.bullets.length > 0 && <BulletList bullets={job.bullets} />}
           </div>
         ))}
       </div>
