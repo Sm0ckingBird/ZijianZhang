@@ -138,17 +138,7 @@ export function Sidebar() {
           </nav>
         </div>
 
-        <div className="flex flex-col gap-6">
-          <a
-            href={profile.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-fit rounded border border-teal px-5 py-2.5 font-mono text-xs text-teal transition-all hover:-translate-y-0.5 hover:bg-teal/10"
-          >
-            View Full Résumé
-          </a>
-          <SocialIcons />
-        </div>
+        <SocialIcons />
       </aside>
 
       {/* Mobile top bar */}
@@ -176,18 +166,7 @@ export function Sidebar() {
           <nav>
             <Nav active={active} onNavigate={() => setOpen(false)} />
           </nav>
-          <div className="flex flex-col gap-8">
-            <a
-              href={profile.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-fit rounded border border-teal px-5 py-2.5 font-mono text-xs text-teal"
-              onClick={() => setOpen(false)}
-            >
-              View Full Résumé
-            </a>
-            <SocialIcons />
-          </div>
+          <SocialIcons />
         </div>
       )}
 

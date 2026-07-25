@@ -1,4 +1,4 @@
-import { experience } from "@/lib/data";
+import { experience, profile } from "@/lib/data";
 import { withBasePath } from "@/lib/basePath";
 import { SectionHeading } from "./SectionHeading";
 import { BulletList } from "./BulletList";
@@ -36,6 +36,15 @@ export function Experience() {
           </div>
         ))}
       </div>
+
+      <a
+        href={profile.resumeUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-8 inline-block w-fit rounded border border-teal px-5 py-2.5 font-mono text-xs text-teal transition-all hover:-translate-y-0.5 hover:bg-teal/10"
+      >
+        View Full Résumé
+      </a>
     </section>
   );
 }
