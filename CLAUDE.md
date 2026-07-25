@@ -79,6 +79,21 @@ button). The mobile menu and desktop sidebar duplicate the nav + social icons ma
 intentionally (different layout containers, not worth abstracting further for this size
 of component).
 
+**Analytics (`components/ViewCounter.tsx`, `lib/data.ts` → `analytics.goatcounterCode`).**
+Pageviews are tracked via GoatCounter (`https://nightwalkzz.goatcounter.com`), a
+privacy-friendly hosted analytics service — no cookies/consent banner, so no extra
+compliance work needed. The `count.js` tracking snippet is loaded in `app/layout.tsx` via
+`next/script`. The footer's "today/total views" numbers come from GoatCounter's public
+`/counter/TOTAL.json` endpoint, fetched client-side with no API key (client-side is the
+only option — this site has no backend to hide a secret key behind). This requires two
+non-default settings on the GoatCounter site itself (Settings → Site settings): **"Allow
+adding visitor counts on your website"** checked (otherwise `/counter/*.json` 403s) and
+**"Dashboard viewable by" → "Anyone"** (so the linked-to public dashboard works for
+visitors, not just the logged-in owner). If the footer counter ever silently disappears,
+check those two toggles first before assuming the code broke — GoatCounter has no world
+map visualization, only a country list, which is why there's a "site stats" link to the
+dashboard instead of an embedded map.
+
 ## Design conventions established in this codebase
 
 - **Teal (`--color-teal`, `text-teal`) is the only accent color** and is applied
