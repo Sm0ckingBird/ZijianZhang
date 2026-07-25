@@ -5,7 +5,7 @@ import { BulletList } from "./BulletList";
 
 export function Experience() {
   return (
-    <section id="experience" className="max-w-4xl px-6 py-10 sm:px-10 lg:px-12">
+    <section id="experience" className="max-w-4xl px-6 py-8 sm:px-10 lg:px-12">
       <SectionHeading number="03" title="Work Experience" />
 
       <div className="space-y-4">
@@ -14,24 +14,30 @@ export function Experience() {
             key={`${job.company}-${job.role}`}
             className="rounded-lg border border-navy-lighter bg-navy-light p-5 shadow-[0_10px_30px_-15px_rgba(2,12,27,0.7)] transition-all duration-300 hover:-translate-y-1 hover:border-teal"
           >
-            <div className="flex flex-wrap items-center gap-3">
-              {job.logo && (
-                <img
-                  src={withBasePath(job.logo)}
-                  alt={job.company}
-                  className="h-9 w-auto max-w-[130px] flex-none object-contain"
-                />
-              )}
+            <div className="grid gap-x-6 gap-y-3 sm:grid-cols-[130px_1fr]">
+              <div className="text-xs font-semibold uppercase tracking-wider text-teal sm:pt-1">
+                {job.period}
+              </div>
+
               <div>
-                <h3 className="font-semibold text-lightest-slate">
-                  {job.role} <span className="font-normal text-teal">@ {job.company}</span>
-                </h3>
-                <p className="font-mono text-xs text-slate-dim">
-                  {job.location} &middot; {job.period}
-                </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  {job.logo && (
+                    <img
+                      src={withBasePath(job.logo)}
+                      alt={job.company}
+                      className="h-9 w-auto max-w-[130px] flex-none object-contain"
+                    />
+                  )}
+                  <div>
+                    <h3 className="font-semibold text-lightest-slate">
+                      {job.role} <span className="font-normal text-teal">@ {job.company}</span>
+                    </h3>
+                    <p className="font-mono text-xs text-slate-dim">{job.location}</p>
+                  </div>
+                </div>
+                {job.bullets.length > 0 && <BulletList bullets={job.bullets} />}
               </div>
             </div>
-            {job.bullets.length > 0 && <BulletList bullets={job.bullets} />}
           </div>
         ))}
       </div>
